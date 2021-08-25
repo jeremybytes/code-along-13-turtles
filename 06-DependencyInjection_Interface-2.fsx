@@ -58,6 +58,8 @@ module TurtleApiLayer_FP =
                 let newState = turtleFunctions.setColor color state
                 updateState newState
                 }
+            | _ ->
+                Error (InvalidCommand commandStr)
 
 module TurtleImplementation_FP =
     open FPTurtleLib
